@@ -1,6 +1,7 @@
 @import url('./footer.css');
 @import url('./about.css');
 @import url('./projects.css');
+@import url('./contacts.css');
 
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(20px); }
