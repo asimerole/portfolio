@@ -1,0 +1,131 @@
+.header__wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* на всякий случай */
+    position: relative;
+    height: 100px;
+}
+  
+/* Portfolio */
+.name {
+    display: inline-block;
+    width: fit-content;
+    font-family: 'Jomhuria';
+    color: white;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.name>p{
+    font-size: 72px;
+}
+
+/* nav — position center */
+.nav-bar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.nav-curr{
+    background-color: rgba(255, 98, 0, 1);
+}
+  
+/* Lang — pos right */
+.lang {
+    position: relative;
+    display: flex;
+    cursor: pointer;
+    margin-right: 54px;
+    font-family: 'Rubik';
+}
+
+.lang_ico{
+    display: flex;
+    align-items: center;
+}
+
+.lang_ico>img{
+    width: 30px;
+    height: 30px;
+}
+.lang__current {
+    color: white;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    background-color: transparent;
+    user-select: none;
+}
+  
+.lang__list {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #1e1e1e;
+    border: 1px solid #444;
+    border-radius: 6px;
+    list-style: none;
+    padding: 0;
+    margin: 5px 0 0 0;
+    display: none;
+    z-index: 999;
+    min-width: 150px;
+}
+  
+.lang__list li a {
+    display: block;
+    font-size: 15px;
+    font-family: "Rubik";
+    padding: 10px 15px;
+    color: white;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+  
+.lang__list li a:hover {
+    background-color: #333;
+}
+
+
+.navbar_button {
+    width: 150px;
+    height: 47px;
+    border-radius: 38px;
+    background-color: rgba(21, 21, 21, 1);
+    list-style: none;
+    border: 2px solid white;
+}
+  
+.navbar__link {
+    display: flex;               
+    align-items: center;        
+    justify-content: center;    
+    text-decoration: none;
+    color: white;
+    font-family: 'Montserrat Alternates';
+    font-size: 20px;
+    width: 100%;
+    height: 100%;
+    border-radius: 38px;   
+    transition: 0.3s;    
+} 
+
+.navbar_button:hover{
+    background-color: white; 
+    transition: 0.3s;
+}
+
+.navbar__link:hover{
+    color: rgba(21, 21, 21, 1); 
+}  
+
+ul{
+  display: flex;
+  flex-direction: row;
+  gap: 31px;
+}
+
+.navbar-nav{
+    list-style: none
+}

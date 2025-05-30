@@ -1,0 +1,208 @@
+.tech-skills{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px; 
+}
+
+.card {
+  background-color: rgba(40, 40, 40, 0.8); 
+  border-radius: 12px;                     
+  box-shadow: 0 4px 20px rgba(255, 98, 0, 0.411); 
+  padding: 10px;
+  color: white;
+  transition: 0.3s;
+}
+
+.card:hover{
+    border: 0.5px solid #ffffffb4;
+    transform: translateY(-4px);
+}
+
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.747); 
+}
+
+.modal_content {
+  font-family: 'Space Mono', 'Roboto Mono', monospace;
+  font-weight: bold;
+  font-size: 15px;
+  background-color: rgb(17, 25, 40);
+  margin: 10% auto;
+  padding: 20px;
+  border-radius: 12px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 4px 12px rgb(255, 255, 255);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.certificate_modal{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: fit-content;
+    margin: 5% auto;
+}
+
+.modal-title{
+    font-size: 30px;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  top: 0;
+  margin-right: 30px;
+  margin-top: 30px;
+}
+
+.close:hover {
+  color: red;
+}
+
+.card_header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 3px;
+}
+
+.card_logo, .card_logo>img{
+    width: 36px;
+    height: 36px;
+}
+.card_content, .card_header_title{
+    font-size: 15px;
+}
+
+.big_card_content{
+    font-size: 12px;
+}
+
+.card_header_title{
+    font-size: 18px;
+    margin: 0;
+}
+
+.orange-card{
+    box-shadow: 0 4px 20px rgba(255, 98, 0, 0.411); 
+}
+
+.orange-card:hover{
+    transform: translateY(-4px);
+    box-shadow: 0 6px 24px rgba(255, 98, 0, 1);
+}
+
+.cpp-card{
+    background: linear-gradient(
+    175deg,            
+    #000000 -17%,          
+    #1890FF 130%        
+    );
+
+    box-shadow: 0 4px 20px #188fff81; 
+}
+
+.cpp-card:hover{
+    box-shadow: 0 6px 24px #1890FF;
+}
+
+.qt-card{
+    background: linear-gradient(
+    175deg,            
+    #000000 -17%,          
+    #41CD52 130%        
+    );
+
+    box-shadow: 0 4px 20px #41cd5180; 
+}
+
+.qt-card:hover{
+    box-shadow: 0 6px 24px #41CD52;
+}
+
+.git-card{
+    background: linear-gradient(
+    175deg,            
+    #000000 -17%,          
+    #EE513B 130%        
+    );
+
+    box-shadow: 0 4px 20px #ee503b79; 
+}
+
+.git-card:hover{
+    box-shadow: 0 6px 24px #EE513B;
+}
+
+.cmake-card{
+    background: linear-gradient(
+    165deg,            
+    #4A49CA -17%, 
+    #D12B2B 30%,         
+    #02CC01 130%        
+    );
+
+    box-shadow: 0 4px 20px #d12b2b71; 
+}
+
+.cmake-card:hover{
+    box-shadow: 0 6px 24px #D12B2B;
+}
+
+.github-card{
+    background: linear-gradient(
+    175deg,            
+    #24292E -17%,          
+    #5E6E76 130%        
+    );
+
+    box-shadow: 0 4px 20px #5e6e766b; 
+}
+
+.github-card:hover{
+    box-shadow: 0 6px 24px #5E6E76;
+}
+
+.sql-card{
+    background: linear-gradient(
+    175deg,            
+    #000000 -17%,          
+    #00BCF2 130%        
+    );
+
+    box-shadow: 0 4px 20px #00bef26e; 
+}
+
+.sql-card:hover{
+    box-shadow: 0 6px 24px #00BCF2;
+}
+
+.sharp-card{
+    background: linear-gradient(
+    175deg,            
+    #000000 -17%, 
+    #A179DC 65%,         
+    #513185 130%        
+    );
+
+    box-shadow: 0 4px 20px #a179dc6c; 
+}
+
+.sharp-card:hover{
+    box-shadow: 0 6px 24px #A179DC;
+}

@@ -1,0 +1,164 @@
+.video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1; 
+    overflow: hidden;
+    opacity: 10%;
+}
+  
+.video-bg video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; 
+}
+
+.main_info{
+    margin-top: 75px;
+}
+
+.contacts_header{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    font-family: 'Montserrat Alternates';
+}
+
+.top_header{
+    font-size: 24px;
+    margin: 0;
+}
+
+#contact-mid-header{
+    margin-top: 9px;
+    margin-bottom: 0;
+    font-size: 64px;
+    font-weight: 700;
+}
+
+.projects_status{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.dot_status{
+    background-color: #00FF00;
+    /* background-color: #FF0000; */
+    width: 10px;
+    height: 10px;
+    border-radius: 10px;
+    border: 1px solid white;
+    margin-right: 8px;
+    margin-bottom: 2px;
+}
+
+.container_form{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.form_line{
+    width: 5px;
+    height: 360px;
+    background-color: white;
+    border-radius: 50px;
+}
+
+.contact_form{
+    margin-left: 27px;
+    margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    color: white;
+    font-family: 'Montserrat Alternates';
+}
+
+.form_field {
+    display: flex;
+    flex-direction: column;
+  }
+  
+.form_field label {
+    margin-bottom: 5px;
+    
+    font-size: 16px;
+}
+
+.form_field>input{
+    height: 55px;
+}
+
+.form_field input,
+.form_field textarea {
+    border-radius: 15px;
+    background-color: rgba(53, 54, 60, 0.5);
+    width: 424px;
+    color: white;
+    border: none;
+    font-size: 16px;
+    padding-left: 10px;
+    font-family: 'Montserrat Alternates';
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    box-shadow: none; 
+}
+  
+  
+.form_field textarea{
+    padding-top: 10px;
+    padding-left: 10px;
+    min-height: 161px;
+    max-width: 424px;
+}
+
+.form_submit {
+    background-color: white;
+    color: black;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    height: 35px;
+    width: 93px;
+    cursor: pointer;
+    font-family: 'Montserrat Alternates';
+}
+  
+.form_submit:hover {
+    color: white;
+    background-color: rgba(255, 98, 0, 1);
+}
+
+.contact_info{
+    margin-top: 100px;
+    margin-left: 27%;
+    display: flex;
+    flex-direction: row;
+    gap: 53px;
+    font-family: 'Montserrat Alternates';
+    font-size: 20px;
+    color: white;
+}
+.phones, .mail, .location{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    align-items: center;
+}
+
+.nums>p{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+

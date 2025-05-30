@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script defer src="./scripts/main.js"></script>
+    <title>About - Shepelev Portfolio</title>
+  </head>
+
+  <body class="grid-bg">
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="nav-bar">
+        <a href="index.html">AS</a>
+        <div class="navbar-items navbar-items--active">
+          <a class="nav-link" id="nav-home" href="./index.html"></a>
+          <a class="nav-link nav-curr" id="nav-about" href="./about.html"></a> 
+          <a class="nav-link" id="nav-projects" href="./projects.html"></a> 
+          <a class="nav-link" id="nav-contacts" href="./contacts.html"></a> 
+        </div>   
+      </nav> 
+      <div class="lang" onclick="toggleLangMenu()">
+        <div class="lang_ico"><img src="/images/language-svgrepo-com.png" alt=""></div>
+        <div class="lang__current" id="language"></div>
+        <ul class="lang__list" id="langMenu">
+          <li><a href="#" data-lang="English">English</a></li>
+          <li><a href="#" data-lang="Deutsch">Deutsch</a></li>
+          <li><a href="#" data-lang="Українська">Українська</a></li>
+        </ul>
+      </div>
+
+      <!-- Main content-->
+       <div class="main-content">
+        <!-- Profile Image Section -->
+        <div class="profile animate-slide-left">
+          <div class="profile-image-container glass">
+            <div class="profile-image-wrapper">
+              <img src="./images/me_doll.png" alt="me-doll">
+            </div>
+          </div>
+          <div class="cereer-container glass">
+            <h3 class="career-header">Career Timeline</h3>
+            <div>
+              <div class="timeline-item animate-fade-in delay-100">
+                <h4>Junior C++ Developer</h4>
+                <p class="timeline-time">2024 - Currently</p>
+                <p class="timeline-time-descr">Development of software for automation of company processes</p>
+              </div>
+              <div class="timeline-item animate-fade-in delay-200 ">
+                <h4>Junior C++ Developer</h4>
+                <p class="timeline-time">2022 - 2024</p>
+                <p class="timeline-time-descr">Developed my own projects to improve my skills</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- About me Section -->
+        <div class="about animate-slide-right">
+          <div class="about-wrapper glass">
+            <h2 class="glow-text">About Me</h2>
+
+            <div class="about_content">
+              <p class="about-text" id="about_text"></p>
+            </div>
+
+            <h3 class="text-2xl font-bold mb-6 text-blue-400">Technical Skills</h3>
+            <div class="tech-skills">
+              <div  class="card cpp-card " 
+                      onclick="openModal(this)"
+                      data-title="C++ programming language"
+                      data-text-key="cpp_modal_description">
+                      
+                  <div class="card_header">
+                    <div class="card_logo"><img src="/images/icons/c++_svg.png" alt=""></div>
+                    <p class="card_header_title">C++ programming language</p>
+                  </div>
+                  <p class="card_content"></p>
+              </div>
+
+              <div class="card qt-card"
+                    onclick="openModal(this)"
+                    data-title="Qt Framework"
+                    data-text-key="qt_modal_description">
+                <div class="card_header">
+                  <div class="card_logo"><img src="/images/icons/qt-svg.svg" alt=""></div>
+                  <p class="card_header_title">Qt Framework</p>
+                </div>
+                <p class="card_content"></p>
+              </div>
+                            <div class="card git-card"
+                    onclick="openModal(this)"
+                    data-title="Git"
+                    data-text-key="git_modal_description">
+                <div class="card_header">
+                  <div class="card_logo"><img src="/images/icons/git-svg.svg" alt=""></div>
+                  <p class="card_header_title">Git</p>
+                </div>
+                <p class="card_content" id="about-card-content"></p>
+              </div>
+  
+              <div class="card cmake-card"
+                    onclick="openModal(this)"
+                    data-title="CMake"
+                    data-text-key="cmake_modal_description">
+                <div class="card_header">
+                  <div class="card_logo"><img src="/images/icons/cmake-svg.svg" alt=""></div>
+                  <p class="card_header_title">CMake</p>
+                </div>
+                <p class="card_content" id="about-card-content"></p>
+              </div>
+  
+              <div class="card github-card"
+                    onclick="openModal(this)"
+                    data-title="GitHub"
+                    data-text-key="github_modal_description">
+                <div class="card_header">
+                  <div class="card_logo"><img src="/images/icons/github-svg-white.png" alt=""></div>
+                  <p class="card_header_title">GitHub</p>
+                </div>
+                <p class="card_content" id="about-card-content"></p>
+              </div>
+  
+              <div class="card sql-card"
+                    onclick="openModal(this)"
+                    data-title="SQL Databases"
+                    data-text-key="sql_modal_description">
+                <div class="card_header">
+                  <div class="card_logo"><img src="/images/icons/sql-database-svg.svg" alt=""></div>
+                  <p class="card_header_title">SQL Databases</p>
+                </div>
+                <p class="card_content" id="about-card-content"></p>
+              </div>
+  
+              <div class="card sharp-card"
+                    onclick="openModal(this)"
+                    data-title="C# programming language"
+                    data-text-key="csharp_modal_description">
+                <div class="card_header">
+                  <div class="card_logo"><img src="/images/icons/csharp.svg.png" alt=""></div>
+                  <p class="card_header_title">C# programming language</p>
+                </div>
+                <p class="card_content" id="about-card-content"></p>
+              </div>
+
+            </div>
+          </div>
+          </div>
+          <div id="modal" class="modal">
+            <div class="modal_content">
+              <span class="close" onclick="closeModal()">&times;</span>
+              <h2 class="modal-title" id="modal-title"></h2>
+              <p id="modal-text"></p>
+            </div>
+          </div>
+        </div>
+       </div>
+    </div>
+
+    <footer>
+      <p id="rights"></p>
+    </footer>
+  </body>
+</html>

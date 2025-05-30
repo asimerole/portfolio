@@ -1,0 +1,15 @@
+footer{
+    margin-left: 54px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    color: white;
+    padding: 10px 20px;
+    z-index: 1000;
+    
+}
+
+footer>p{
+    color: white;
+    font-family: 'Space Mono', 'Roboto Mono', monospace;
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <script defer src="./scripts/main.js"></script>
+    <title>Contact - Shepelev Portfolio</title>
+  </head>
+
+  <body class="grid-bg">
+    <div class="container">
+      <!-- Navigation -->
+      <nav class="nav-bar">
+        <a href="index.html">AS</a>
+        <div class="navbar-items navbar-items--active">
+          <a class="nav-link" id="nav-home" href="./index.html"></a>
+          <a class="nav-link" id="nav-about" href="./about.html"></a> 
+          <a class="nav-link" id="nav-projects" href="./projects.html"></a> 
+          <a class="nav-link nav-curr" id="nav-contacts" href="./contacts.html"></a> 
+        </div>   
+      </nav> 
+      <div class="lang" onclick="toggleLangMenu()">
+        <div class="lang_ico"><img src="/images/language-svgrepo-com.png" alt=""></div>
+        <div class="lang__current" id="language"></div>
+        <ul class="lang__list" id="langMenu">
+          <li><a href="#" data-lang="English">English</a></li>
+          <li><a href="#" data-lang="Deutsch">Deutsch</a></li>
+          <li><a href="#" data-lang="Українська">Українська</a></li>
+        </ul>
+      </div>
+    </div>
+    <footer>
+      <p id="rights"></p>
+    </footer>
+  </body>
+</html>
