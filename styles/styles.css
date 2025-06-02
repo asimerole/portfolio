@@ -46,8 +46,7 @@
 }
 
 body, html {
-    width: 1920px;
-    min-height: 1080px;
+    min-height: 960px;
     margin: 0;
     padding: 0;
     overflow-x: hidden;
@@ -71,15 +70,27 @@ body, html {
 }
 
 .lang {
-    position: fixed;
     display: flex;
-    right: 0;
-    top: 0;
-    margin-top: 30px;
     cursor: pointer;
-    margin-right: 54px;
+    margin-left: 15px;
     font-family: 'Rubik';
     z-index: 998;
+}
+
+.absolute{
+    position: absolute;
+}
+
+.right{
+    right: 0;
+}
+
+.margin-top{
+    margin-top: 1.875rem;
+}
+
+.margin-right{
+    margin-right: 5rem;
 }
 
 .lang_ico{
@@ -94,22 +105,20 @@ body, html {
 .lang__current {
     color: white;
     font-size: 18px;
-    padding: 8px 12px;
     border-radius: 8px;
     background-color: transparent;
     user-select: none;
+    margin-left: 5px;
 }
   
 .lang__list {
     position: absolute;
-    top: 100%;
-    right: 0;
     background-color: #1e1e1e;
     border: 1px solid #444;
     border-radius: 6px;
     list-style: none;
     padding: 0;
-    margin: 5px 0 0 0;
+    margin: 25px 0 0 0;
     display: none;
     z-index: 999;
     min-width: 150px;
@@ -263,3 +272,54 @@ body, html {
 .delay-400 { animation-delay: 400ms; }
 .delay-600 { animation-delay: 600ms; }
 .delay-800 { animation-delay: 800ms; }
+
+
+/*
+
+| Device                  | Type         | Width (min–max)  | Comment                          |
+| ----------------------- | ------------ | ---------------- | -------------------------------- |
+| **Mobile**              | `mobile`     | 0 – 639px        | iPhone, Android                  |      
+| **Tablect vertical **   | `tablet-sm`  | 640 – 767px      | Small Tablets, Big Phones        |
+| **Tablet horizontal  ** | `tablet`     | 768 – 1023px     | iPad horizontal                  |
+| **Desktop small **      | `laptop-sm`  | 1024 – 1279px    | Standart Laptops                 |
+| **Desktop**             | `desktop`    | 1280 – 1535px    | Full HD monitors                 |
+| **Big screens**         | `desktop-xl` | 1536px and more  | 2K/4K and TV                     |
+
+*/
+
+@media (max-width: 639px) {
+    .margin-top{
+        margin-top: .875rem;
+    }
+
+    .margin-right{
+        margin-right: 1rem;
+    }
+}
+
+/* 
+Планшеты (640px и выше) 
+@media (min-width: 640px) and (max-width: 1023px) {
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+Десктопы (1024px и выше) 
+@media (min-width: 1024px) {
+  .menu {
+    display: flex;
+  }
+
+  .burger {
+    display: none;
+  }
+
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+*/
+

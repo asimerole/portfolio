@@ -202,3 +202,31 @@
 .live-demo-btn>svg{
     margin-right: .25rem;
 }
+
+/*
+
+| Device                  | Type         | Width (min–max)  | Comment                          |
+| ----------------------- | ------------ | ---------------- | -------------------------------- |
+| **Mobile**              | `mobile`     | 0 – 639px        | iPhone, Android                  |      
+| **Tablect vertical **   | `tablet-sm`  | 640 – 767px      | Small Tablets, Big Phones        |
+| **Tablet horizontal  ** | `tablet`     | 768 – 1023px     | iPad horizontal                  |
+| **Desktop small **      | `laptop-sm`  | 1024 – 1279px    | Standart Laptops                 |
+| **Desktop**             | `desktop`    | 1280 – 1535px    | Full HD monitors                 |
+| **Big screens**         | `desktop-xl` | 1536px and more  | 2K/4K and TV                     |
+
+*/
+
+@media (max-width: 639px) {
+    .certificates-title{
+        text-align: center;
+    }
+
+    .grid{
+        grid-template-columns: repeat(1, minmax(0,1fr));
+        gap: 1rem;
+    }
+
+    .projects-grid{
+        grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+}

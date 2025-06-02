@@ -61,14 +61,14 @@
 }
 
 .main-content{
-    /*flex-wrap: wrap;*/
+    flex-wrap: wrap;
     display: flex;
 }
 
 .profile{
     opacity: 0;
     animation-play-state: running;
-    width: 33.333333%;
+    width: 27%;
     padding-right: 2.5rem;
 }
 
@@ -85,7 +85,6 @@
     justify-content: center;
     align-items: center;
     height: 24rem;
-    
     display: flex;
 }
 .profile-image-wrapper>img{
@@ -163,7 +162,7 @@
 }
 
 .about{
-    width: 63.666667%;
+    width: 70%;
     opacity: 0;
     animation-play-state: running;
     padding: 0;
@@ -203,32 +202,73 @@
     margin-bottom: 2.5rem;
 }
 
-@media (min-width: 640px) {
-  .container {
-    max-width: 640px;
-  }
-}
+/*
 
-@media (min-width: 768px) {
-  .container {
-    max-width: 768px;
-  }
-}
+| Device                  | Type         | Width (min–max)  | Comment                          |
+| ----------------------- | ------------ | ---------------- | -------------------------------- |
+| **Mobile**              | `mobile`     | 0 – 639px        | iPhone, Android                  |      
+| **Tablect vertical **   | `tablet-sm`  | 640 – 767px      | Small Tablets, Big Phones        |
+| **Tablet horizontal  ** | `tablet`     | 768 – 1023px     | iPad horizontal                  |
+| **Desktop small **      | `laptop-sm`  | 1024 – 1279px    | Standart Laptops                 |
+| **Desktop**             | `desktop`    | 1280 – 1535px    | Full HD monitors                 |
+| **Big screens**         | `desktop-xl` | 1536px and more  | 2K/4K and TV                     |
 
-@media (min-width: 1024px) {
-  .container {
-    max-width: 1024px;
-  }
-}
+*/
 
-@media (min-width: 1280px) {
-  .container {
-    max-width: 1280px;
-  }
-}
+@media (max-width: 639px) {
+    .hamburger {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
 
-@media (min-width: 1536px) {
-  .container {
-    max-width: 1536px;
-  }
+    .line{
+        height: 2px;
+        background-color: white;
+    }
+
+    .navbar-items {
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        background: #111;
+        width: 70%;
+        height: 100vh;
+        padding: 2rem;
+        transition: 0.3s ease;
+        z-index: 999;
+    }
+
+    .navbar-items.active {
+      left: 0;
+    }
+
+    .nav-link {
+      margin: 1rem 0;
+      font-size: 1.25rem;
+    }
+
+    .profile{
+        width: 100%;
+        padding: 0;
+    }
+
+    .profile-image-wrapper > img{
+        height: 25rem;
+        width: 25rem;
+    }
+
+    .about{
+        width: 100%;
+        margin-top: 1.5rem;
+    }
+
+    .tech-skills{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rights{
+        margin-top: 1.5rem;
+    }
 }
