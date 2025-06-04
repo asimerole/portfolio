@@ -1,7 +1,6 @@
-  function toggleMobileMenu() {
-    document.getElementById("navLinks").classList.toggle("active");
-  }
+function toggleMenu(button) {
+    button.classList.toggle("active");
 
-  function toggleLangMenu() {
-    document.getElementById("langMenu").classList.toggle("open");
-  }
+    const menu = document.getElementById("menu");
+    menu.classList.toggle("active");
+}

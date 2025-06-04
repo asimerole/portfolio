@@ -214,41 +214,8 @@
 | **Big screens**         | `desktop-xl` | 1536px and more  | 2K/4K and TV                     |
 
 */
-
+    
 @media (max-width: 639px) {
-    .hamburger {
-        display: flex;
-        flex-direction: column;
-        gap: 3px;
-    }
-
-    .line{
-        height: 2px;
-        background-color: white;
-    }
-
-    .navbar-items {
-        position: fixed;
-        top: 0;
-        left: -100%;
-        flex-direction: column;
-        background: #111;
-        width: 70%;
-        height: 100vh;
-        padding: 2rem;
-        transition: 0.3s ease;
-        z-index: 999;
-    }
-
-    .navbar-items.active {
-      left: 0;
-    }
-
-    .nav-link {
-      margin: 1rem 0;
-      font-size: 1.25rem;
-    }
-
     .profile{
         width: 100%;
         padding: 0;
@@ -270,5 +237,13 @@
 
     .rights{
         margin-top: 1.5rem;
+    }
+
+    .nav-bar{
+        display: none;
+    }
+    
+    .container{
+        margin-top: 2rem;
     }
 }
