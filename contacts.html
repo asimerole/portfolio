@@ -11,6 +11,48 @@
   </head>
 
   <body class="grid-bg">
+            <!-- Mobile version Header-->
+    <header class="mobile-header">
+      <div class="glow-text header-text">NS</div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
+          <span></span>
+          <span></span>
+          <span></span>
+      </div>
+    </header>
+    <div class="menu-wrapper">
+      <div class="menu-container animate-slide-in delay-200" id="menu">
+          <h2 class="glow-text">Navigation</h2>
+          
+          <nav class="space-y-4">
+              <a href="index.html" class="menu-item animate-slide-in delay-300">
+                  <svg width="18px" height="18px" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8 0L0 6V8H1V15H4V10H7V15H15V8H16V6L14 4.5V1H11V2.25L8 0ZM9 10H12V13H9V10Z" fill="#60a5fa"/>
+                  </svg>
+                  <span class="text-lg">Home</span>
+              </a>
+              
+              <a href="about.html" class="menu-item animate-slide-in delay-400">
+                  <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M16.5 7.063C16.5 10.258 14.57 13 12 13c-2.572 0-4.5-2.742-4.5-5.938C7.5 3.868 9.16 2 12 2s4.5 1.867 4.5 5.063zM4.102 20.142C4.487 20.6 6.145 22 12 22c5.855 0 7.512-1.4 7.898-1.857a.416.416 0 0 0 .09-.317C19.9 18.944 19.106 15 12 15s-7.9 3.944-7.989 4.826a.416.416 0 0 0 .091.317z" fill="#60a5fa"/></svg>
+                  <span class="text-lg">About Me</span>
+              </a>
+              
+              <a href="projects.html" class="menu-item animate-slide-in delay-500">
+                  <svg fill="#60a5fa" width="18px" height="18px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M21.656 1.837c-0.136-0.055-0.293-0.087-0.458-0.087-0.525 0-0.975 0.324-1.16 0.784l-0.003 0.008-10.255 26.058c-0.056 0.137-0.089 0.296-0.089 0.463 0 0.69 0.559 1.25 1.25 1.25 0.528 0 0.98-0.328 1.163-0.791l0.003-0.008 10.257-26.056c0.055-0.135 0.086-0.292 0.086-0.457 0-0.526-0.325-0.977-0.785-1.162l-0.008-0.003zM9.884 22.115l-6.173-6.172 6.229-7.121c0.192-0.219 0.309-0.507 0.309-0.823 0-0.69-0.56-1.25-1.25-1.25-0.374 0-0.71 0.165-0.939 0.425l-0.001 0.001-7 8.001c-0.192 0.219-0.31 0.507-0.31 0.823 0 0.345 0.14 0.658 0.366 0.884v0l7 7.001c0.226 0.226 0.539 0.366 0.884 0.366 0.691 0 1.251-0.56 1.251-1.251 0-0.346-0.14-0.658-0.367-0.885v0zM30.941 15.177l-7-8c-0.23-0.263-0.567-0.427-0.941-0.427-0.691 0-1.251 0.56-1.251 1.251 0 0.316 0.117 0.605 0.31 0.825l-0.001-0.001 6.23 7.12-6.174 6.172c-0.226 0.226-0.366 0.539-0.366 0.884 0 0.691 0.56 1.251 1.251 1.251 0.345 0 0.658-0.14 0.884-0.366l7-7.001c0.226-0.226 0.366-0.539 0.366-0.884 0-0.316-0.117-0.605-0.311-0.825l0.001 0.001z"/>
+                  </svg>
+                  <span class="text-lg">Projects</span>
+              </a>
+              
+              <a href="contacts.html" class="menu-item current animate-slide-in delay-600">
+                  <svg width="18px" height="18px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 8L8.44992 11.6333C9.73295 12.4886 10.3745 12.9163 11.0678 13.0825C11.6806 13.2293 12.3194 13.2293 12.9322 13.0825C13.6255 12.9163 14.2671 12.4886 15.5501 11.6333L21 8M6.2 19H17.8C18.9201 19 19.4802 19 19.908 18.782C20.2843 18.5903 20.5903 18.2843 20.782 17.908C21 17.4802 21 16.9201 21 15.8V8.2C21 7.0799 21 6.51984 20.782 6.09202C20.5903 5.71569 20.2843 5.40973 19.908 5.21799C19.4802 5 18.9201 5 17.8 5H6.2C5.0799 5 4.51984 5 4.09202 5.21799C3.71569 5.40973 3.40973 5.71569 3.21799 6.09202C3 6.51984 3 7.07989 3 8.2V15.8C3 16.9201 3 17.4802 3.21799 17.908C3.40973 18.2843 3.71569 18.5903 4.09202 18.782C4.51984 19 5.07989 19 6.2 19Z" stroke="#60a5fa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                  <span class="text-lg">Contacts</span>
+              </a>
+          </nav>
+        </div>
+    </div>
     <div class="container">
       <!-- Navigation -->
       <nav class="nav-bar">
@@ -25,9 +67,9 @@
         <!-- Navigation links -->
         <div class="navbar-items navbar-items--active" id="navLinks">
           <a class="nav-link" id="nav-home" href="index.html"></a>
-          <a class="nav-link nav-curr" id="nav-about" href="about.html"></a> 
+          <a class="nav-link" id="nav-about" href="about.html"></a> 
           <a class="nav-link" id="nav-projects" href="projects.html"></a> 
-          <a class="nav-link" id="nav-contacts" href="contacts.html"></a> 
+          <a class="nav-link nav-curr" id="nav-contacts" href="contacts.html"></a> 
           <div class="lang" onclick="toggleLangMenu()">
             <svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="796 796 200 200" enable-background="new 796 796 200 200" xml:space="preserve">
             <g>
@@ -48,41 +90,54 @@
           </div>
         </div>   
       </nav>  
-      <!--
-            <div class="main-content">
-        <div class="left-side">
-          <h2 class="main-header glow-text animate-fade-in">Get In Touch</h2>
-          <div class="form glass animate-fade-in delay-100">
-            <form id="contactForm">
-              <div class="form-item">
-                  <label for="name">Name</label>
-                  <input type="text" id="name" placeholder="Your name">
-              </div>
-              
-              <div class="form-item">
-                  <label for="email">Email</label>
-                  <input type="email" id="email" placeholder="your.email@example.com">
-              </div>
-              
-              <div class="form-item">
-                  <label for="message">Message</label>
-                  <textarea id="message" rows="6" placeholder="Your message..."></textarea>
-              </div>
-              
-              <button type="submit" class="submit-btn">
-                <svg version="1.1" id="Uploaded to svgrepo.com" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="30px" height="30px" viewBox="0 0 32 32" xml:space="preserve">
-                  <style type="text/css">
-                    .puchipuchi_een{fill:#ffffff;}
-                  </style>
-                  <path class="puchipuchi_een" d="M30.291,2.87l-9.581,25.26c-0.39,1.029-1.346,1.234-2.123,0.456c0,0-6.036-6.036-6.586-6.586  s-0.359-1.631,0.425-2.403l13.316-13.11c0.784-0.772,0.711-0.856-0.163-0.187L10.588,17.784c-0.873,0.669-2.224,0.58-3.002-0.198  l-4.172-4.172c-0.778-0.778-0.573-1.733,0.456-2.124l25.26-9.581C30.159,1.319,30.681,1.841,30.291,2.87z M8.707,20.121  C8.318,19.732,8,19.864,8,20.414V25c0,0.55,0.386,0.768,0.857,0.485l2.401-1.441c0.472-0.283,0.539-0.833,0.15-1.222L8.707,20.121z"/>
-                  </svg>  
-                 Send Message
-              </button>
-            </form>
-          </div>
+      
+    <div class="main-content">
+      <div class="main-container">
+        <h2 class="main-header glow-text animate-fade-in">Get In Touch</h2>
+        <div class="form-container glass animate-fade-in delay-100">
+          <form id="contactForm" class="contact-form" action="https://formsubmit.co/artem.shepelevv@gmail.com" method="POST">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Your message..."></textarea>
+            </div>
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="box">
+            <button type="submit" class="submit-btn" id="submitButton">
+              <span class="btn-text">
+                <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32">
+                  <path fill="#ffffff" d="M30.291,2.87l-9.581,25.26c-0.39,1.029-1.346,1.234-2.123,0.456c0,0-6.036-6.036-6.586-6.586s-0.359-1.631,0.425-2.403l13.316-13.11c0.784-0.772,0.711-0.856-0.163-0.187L10.588,17.784c-0.873,0.669-2.224,0.58-3.002-0.198l-4.172-4.172c-0.778-0.778-0.573-1.733,0.456-2.124l25.26-9.581C30.159,1.319,30.681,1.841,30.291,2.87z M8.707,20.121C8.318,19.732,8,19.864,8,20.414V25c0,0.55,0.386,0.768,0.857,0.485l2.401-1.441c0.472-0.283,0.539-0.833,0.15-1.222L8.707,20.121z"/>
+                </svg>  
+                Send Message
+              </span>
+              <span class="loading-spinner" style="display: none;">
+                <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path fill="#ffffff" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,19a8,8,0,1,1,8-8A8,8,0,0,1,12,20Z" opacity=".25"/>
+                  <path fill="#ffffff" d="M12,4a8,8,0,0,1,7.89,6.7A1.53,1.53,0,0,0,21.38,12h0a1.5,1.5,0,0,0,1.48-1.75,11,11,0,0,0-21.72,0A1.5,1.5,0,0,0,2.62,12h0a1.53,1.53,0,0,0,1.49-1.3A8,8,0,0,1,12,4Z">
+                    <animateTransform attributeName="transform" type="rotate" dur="0.75s" values="0 12 12;360 12 12" repeatCount="indefinite"/>
+                  </path>
+                </svg>
+              </span>
+            </button>
+          </form>
         </div>
       </div>
-      -->
+    </div>
+    <!-- Thank You Message Overlay -->
+    <div id="thankYouMessage" class="thank-you-message">
+        <svg width="80px" height="80px" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"><path fill="#34d399" d="M512 64a448 448 0 1 1 0 896 448 448 0 0 1 0-896zm-55.808 536.384-99.52-99.584a38.4 38.4 0 1 0-54.336 54.336l126.72 126.72a38.272 38.272 0 0 0 54.336 0l262.4-262.464a38.4 38.4 0 1 0-54.272-54.336L456.192 600.384z"/></svg>
+        <h3 class="">Thank You!</h3>
+        <p>Your message has been sent successfully. I'll get back to you as soon as possible.</p>
+    </div>
     </div>
     <p class="rights" style="bottom: 0;" id="rights"></p>
   </body>

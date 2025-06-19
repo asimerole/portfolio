@@ -7,7 +7,7 @@ const translations = {
     contacts: "CONTACTS",
     rights: "Copyright © 2025 | Shepelev Artem",
     my_position: "SOFTWARE DEVELOPER",
-    cv_button: "DOWNLOAD CV",
+    contacts_button: "GET IN TOUCH",
     contact_mid_head: "CONTACT",
     new_projects_status: "Open for new projects.",
     form_name: "Your Name",
@@ -41,7 +41,7 @@ const translations = {
     contacts: "KONTAKT",
     rights: "© 2025 | Alle Rechte vorbehalten",
     my_position: "SOFTWARE ENTWICKLER",
-    cv_button: "CV HERUNTERLADEN ",
+    contacts_button: "IN KONTAKT TRETEN",
     contact_mid_head: "KONTAKT",
     new_projects_status: "Offen für neue Projekte.",
     form_name: "Ihr Name",
@@ -75,7 +75,7 @@ const translations = {
     contacts: "КОНТАКТИ",
     rights: "© 2025 | Усі права захищено",
     my_position: "РОЗРОБНИК ПРОГРАМНОГО ЗАБЕЗПЕЧЕННЯ",
-    cv_button: "ЗАВАНТАЖИТИ CV",
+    contacts_button: "ЗВ’ЯЗАТИСЯ ЗІ МНОЮ",
     contact_mid_head: "КОНТАКТ",
     new_projects_status: "Відкритий для нових проєктів.",
     form_name: "Ваше ім’я",
@@ -103,13 +103,13 @@ const translations = {
   }
 };
 
-// Меню языков
+// Language menu
 function toggleLangMenu() {
   const menu = document.getElementById("langMenu");
   menu.style.display = menu.style.display === "block" ? "none" : "block";
 }
 
-// Закрытие при клике вне
+// Close on click outside
 document.addEventListener('click', function(event) {
   const lang = document.querySelector('.lang');
   const menu = document.getElementById("langMenu");
@@ -119,7 +119,7 @@ document.addEventListener('click', function(event) {
   }
 });
 
-// Применение языка
+// Use of language
 function setLanguage(lang) {
   const t = translations[lang];
   if (!t) return;
@@ -142,7 +142,7 @@ function setLanguage(lang) {
   update("nav-contacts", t.contacts);
   update("rights", t.rights);
   update("my-position", t.my_position);
-  update("cv-button", t.cv_button);
+  update("contacts-button", t.contacts_button);
   update("contact-header", t.contact_top_head);
   update("contact-mid-header", t.contact_mid_head);
   update("projects-status", t.new_projects_status);
@@ -163,7 +163,7 @@ function setLanguage(lang) {
   });
 }
 
-// Клики по языковым пунктам
+// Clicks on language items
 document.querySelectorAll('.lang__list a').forEach(link => {
   link.addEventListener('click', function(e) {
     e.preventDefault();
@@ -173,7 +173,7 @@ document.querySelectorAll('.lang__list a').forEach(link => {
   });
 });
 
-// Автозагрузка выбранного языка
+// Autoload selected language
 document.addEventListener("DOMContentLoaded", () => {
   const savedLang = localStorage.getItem('lang') || 'English';
   setLanguage(savedLang);
@@ -185,13 +185,13 @@ document.addEventListener('DOMContentLoaded', () => {
   
     links.forEach(link => {
       link.addEventListener('click', function(e) {
-        e.preventDefault(); // отмена перехода
+        e.preventDefault(); // cancel transition
   
         const href = this.getAttribute('href');
         
-        document.body.classList.add('fade-out'); // включаем анимацию
+        document.body.classList.add('fade-out'); // turn on animation
   
-        // Ждём окончания анимации и переходим
+        // We wait for the animation to finish and move on.
         setTimeout(() => {
           window.location.href = href;
         }, 500); // 500ms = как в CSS
@@ -222,7 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("modal").style.display = "none";
   }
 
-  // Закрытие по клику вне окна
+  // Close by clicking outside the window
   window.onclick = function(event) {
     const modal = document.getElementById("modal");
     if (event.target === modal) {
@@ -246,10 +246,59 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById("certificateModal").style.display = "none";
   }
   
-  // Чтобы закрывать модальное окно по клику вне его
+  // To close a modal window by clicking outside of it
   window.addEventListener("click", function(event) {
     const modal = document.getElementById("certificateModal");
     if (event.target === modal) {
       closeCertificateModal();
     }
   });
+
+const contactForm = document.getElementById('contactForm');
+const submitButton = document.getElementById('submitButton');
+const btnText = submitButton.querySelector('.btn-text');
+const loadingSpinner = submitButton.querySelector('.loading-spinner');
+const thankYouMessage = document.getElementById('thankYouMessage');
+
+  contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Block the button and show the spinner
+    submitButton.disabled = true;
+    submitButton.classList.add('is-loading');
+    loadingSpinner.style.display = "block"
+    contactForm.style.opacity = "0.4"
+
+    try {
+      const response = await fetch(contactForm.action, {
+        method: 'POST',
+        body: new FormData(contactForm),
+        headers: {
+          'Accept': 'application/json'
+        }
+      });
+      
+      if (response.ok) {
+        // Showing a modal window
+        thankYouMessage.classList.add('show');
+        contactForm.style.opacity = "1"
+        contactForm.reset();
+        submitButton.disabled = false;
+        loadingSpinner.style.display = "none"
+
+        // Automatic closing after 10 seconds
+        setTimeout(() => {
+          thankYouMessage.classList.remove('show');
+        }, 10000);
+      }
+    } catch (error) {
+      console.error('Error:', error);
+    }
+  });
+
+// // Close modal when clicking outside
+thankYouMessage.addEventListener('click', function(e) {
+  if (e.target === thankYouMessage) {
+    thankYouMessage.classList.remove('show');
+  }
+});

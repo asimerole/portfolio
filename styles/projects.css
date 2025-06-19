@@ -222,11 +222,39 @@
     }
 
     .grid{
-        grid-template-columns: repeat(1, minmax(0,1fr));
+        grid-template-columns: repeat(2, minmax(0,1fr));
         gap: 1rem;
     }
 
     .projects-grid{
         grid-template-columns: repeat(1, minmax(0,1fr));
+    }
+
+    .certificate-card{
+        height: 130px;
+    }
+
+    .certificate-card-bg>svg{
+        height: 30px;
+        width: 30px;
+    }
+
+    .certificate-image{
+        width: 100%;
+    }
+
+    .card-descr>p{
+        font-size: .875rem;
+        font-weight: 700;
+        margin: 0;
+    }
+    .card-header>h3{
+        font-size: 1rem;
+        line-height: 1.5rem;
+    }
+
+    .card-header>p{
+        font-size: .8rem;
+        line-height: 1rem;
     }
 }

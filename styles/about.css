@@ -230,6 +230,10 @@
         width: 100%;
         margin-top: 1.5rem;
     }
+    
+    .about-wrapper{
+        padding: 1.5rem;
+    }
 
     .tech-skills{
         grid-template-columns: repeat(2, 1fr);
@@ -244,6 +248,8 @@
     }
     
     .container{
-        margin-top: 2rem;
+        margin: 3rem 0 0 0;
+        padding: 0;
     }
+
 }
