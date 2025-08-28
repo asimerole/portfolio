@@ -78,7 +78,7 @@ body, html {
     background-size: 50px 50px;
 }
 
-.lang {
+.lang-desktop, .lang-mobile {
     display: flex;
     cursor: pointer;
     margin-left: 15px;
@@ -390,6 +390,10 @@ body, html {
         padding: 2rem;
         max-width: 20rem;
         width: 100%;
+    }
+
+    .lang-desktop{
+        display: none;
     }
 
     .menu-item {
