@@ -104,19 +104,21 @@ const translations = {
 };
 
 // Language menu
-function toggleLangMenu() {
-  const menu = document.getElementById("langMenu");
-  menu.style.display = menu.style.display === "block" ? "none" : "block";
+function toggleLangMenu(type) {
+    const menu = document.getElementById(type === 'mobile' ? 'langMenu-mobile' : 'langMenu-desktop');
+    if (!menu) return;
+    menu.style.display = menu.style.display === 'block' ? 'none' : 'block';
 }
 
 // Close on click outside
 document.addEventListener('click', function(event) {
-  const lang = document.querySelector('.lang');
-  const menu = document.getElementById("langMenu");
-
-  if (!lang.contains(event.target)) {
-    menu.style.display = 'none';
-  }
+    ['mobile', 'desktop'].forEach(type => {
+        const langDiv = document.querySelector(`.lang-${type}`);
+        const menu = document.getElementById(`langMenu-${type}`);
+        if (langDiv && !langDiv.contains(event.target)) {
+            menu.style.display = 'none';
+        }
+    });
 });
 
 // Use of language
@@ -157,7 +159,9 @@ function setLanguage(lang) {
   update("about-card-content", t.about_card_content);
   update("about_text", t.about_text);
 
-  document.querySelector('.lang__current').textContent = lang;
+  document.getElementById('language-mobile').textContent = lang;
+  document.getElementById('language-desktop').textContent = lang;
+  
   localStorage.setItem('lang', lang);
 
   const cards = document.querySelectorAll('.card');
@@ -173,7 +177,9 @@ document.querySelectorAll('.lang__list a').forEach(link => {
     e.preventDefault();
     const selectedLang = this.getAttribute('data-lang');
     setLanguage(selectedLang);
-    document.getElementById("langMenu").style.display = 'none';
+
+    document.getElementById("langMenu-mobile").style.display = 'none';
+    document.getElementById("langMenu-desktop").style.display = 'none';
   });
 });
 

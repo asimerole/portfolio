@@ -253,3 +253,9 @@
     }
 
 }
+
+@media(max-width: 490px){
+    .tech-skills{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}

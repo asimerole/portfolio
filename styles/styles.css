@@ -440,6 +440,7 @@ body, html {
 
     .lang{
         margin-top: 15px;
+        display: flex;
     }
 
     .nav-links{
