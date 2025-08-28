@@ -7,3 +7,10 @@
     color: white;
     font-family: 'Space Mono', 'Roboto Mono', monospace;
 }
+
+    
+@media (max-width: 639px) {
+    .rights{
+        position: absolute;
+    }
+}
