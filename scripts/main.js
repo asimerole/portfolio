@@ -136,10 +136,14 @@ function setLanguage(lang) {
   };
 
   update("language", t.language);
-  update("nav-home", t.home);
-  update("nav-about", t.about);
-  update("nav-projects", t.projects);
-  update("nav-contacts", t.contacts);
+  update("nav-home-desktop", t.home);
+  update("nav-about-desktop", t.about);
+  update("nav-projects-desktop", t.projects);
+  update("nav-contacts-desktop", t.contacts);
+  update("nav-home-mobile", t.home);
+  update("nav-about-mobile", t.about);
+  update("nav-projects-mobile", t.projects);
+  update("nav-contacts-mobile", t.contacts);
   update("rights", t.rights);
   update("my-position", t.my_position);
   update("contacts-button", t.contacts_button);
