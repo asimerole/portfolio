@@ -116,7 +116,7 @@
     overflow: hidden;
     animation-play-state: running;
     transition: all 0.3s ease;
-    height: 220px;
+    height: auto;
 }
 
 .project-card:hover {
@@ -127,6 +127,18 @@
 .blue-top-line{
     --tw-bg-opacity: 1;
     background-color: rgba(59,130,246,var(--tw-bg-opacity));
+    height: .5rem;
+}
+
+.dark-blue-top-line{
+    --tw-bg-opacity: 1;
+    background-color: rgba(30,58,138,var(--tw-bg-opacity));
+    height: .5rem;
+}
+
+.green-top-line{
+    --tw-bg-opacity: 0.8;
+    background-color: rgba(39,245,58, var(--tw-bg-opacity));
     height: .5rem;
 }
 
@@ -256,5 +268,8 @@
     .card-header>p{
         font-size: .8rem;
         line-height: 1rem;
+    }
+    .card-descr > p{
+        font-size: 0.675rem;
     }
 }

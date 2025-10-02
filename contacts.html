@@ -11,7 +11,7 @@
   </head>
 
   <body class="grid-bg">
-            <!-- Mobile version Header-->
+    <!-- Mobile version Header-->
     <header class="mobile-header">
       <div class="glow-text header-text">NS</div>
       <div class="hamburger" id="hamburger" onclick="toggleMenu(this)">
@@ -51,7 +51,7 @@
                   <span class="text-lg" id="nav-contacts-mobile"></span>
               </a>
 
-              <div class="lang" onclick="toggleLangMenu('mobile')">
+              <div class="lang animate-slide-in delay-700" onclick="toggleLangMenu('mobile')">
                 <svg fill="#ffffff" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="20px" height="20px" viewBox="796 796 200 200" enable-background="new 796 796 200 200" xml:space="preserve">
                   <g>
                   	<path d="M973.166,818.5H818.833c-12.591,0-22.833,10.243-22.833,22.833v109.333c0,12.59,10.243,22.833,22.833,22.833h154.333   c12.59,0,22.834-10.243,22.834-22.833V841.333C996,828.743,985.756,818.5,973.166,818.5z M896,961.5h-77.167   c-5.973,0-10.833-4.859-10.833-10.833V841.333c0-5.974,4.86-10.833,10.833-10.833H896V961.5z M978.58,872.129   c-0.547,9.145-5.668,27.261-20.869,39.845c4.615,1.022,9.629,1.573,14.92,1.573v12c-10.551,0-20.238-1.919-28.469-5.325   c-7.689,3.301-16.969,5.325-28.125,5.325v-12c5.132,0,9.924-0.501,14.366-1.498c-8.412-7.016-13.382-16.311-13.382-26.78h11.999   c0,8.857,5.66,16.517,14.884,21.623c4.641-2.66,8.702-6.112,12.164-10.351c5.628-6.886,8.502-14.521,9.754-20.042h-49.785v-12   h22.297v-11.986h12V864.5h21.055c1.986,0,3.902,0.831,5.258,2.28C977.986,868.199,978.697,870.155,978.58,872.129z"/>
@@ -112,31 +112,31 @@
       
     <div class="main-content">
       <div class="main-container">
-        <h2 class="main-header glow-text animate-fade-in">Get In Touch</h2>
+        <h2 class="main-header glow-text animate-fade-in" id="contacts-main-header"></h2>
         <div class="form-container glass animate-fade-in delay-100">
           <form id="contactForm" class="contact-form" action="https://formsubmit.co/artem.shepelevv@gmail.com" method="POST">
             <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" class="form-input" placeholder="Your name" required>
+              <label for="name" id="form-name"></label>
+              <input type="text" id="input-name" name="name" class="form-input" placeholder="Your name" required>
             </div>
 
             <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" class="form-input" placeholder="your.email@example.com" required>
+              <label for="email" id="form-email"></label>
+              <input type="email" id="input-email" name="email" class="form-input" placeholder="your.email@example.com" required>
             </div>
 
             <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" class="form-textarea" rows="6" placeholder="Your message..."></textarea>
+              <label for="message" id="form-msg"></label>
+              <textarea id="textarea-msg" name="textarea-message" class="form-textarea" rows="6" placeholder="Your message..."></textarea>
             </div>
             <input type="hidden" name="_captcha" value="false">
             <input type="hidden" name="_template" value="box">
             <button type="submit" class="submit-btn" id="submitButton">
-              <span class="btn-text">
+              <span class="btn-span">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="30px" height="30px" viewBox="0 0 32 32">
                   <path fill="#ffffff" d="M30.291,2.87l-9.581,25.26c-0.39,1.029-1.346,1.234-2.123,0.456c0,0-6.036-6.036-6.586-6.586s-0.359-1.631,0.425-2.403l13.316-13.11c0.784-0.772,0.711-0.856-0.163-0.187L10.588,17.784c-0.873,0.669-2.224,0.58-3.002-0.198l-4.172-4.172c-0.778-0.778-0.573-1.733,0.456-2.124l25.26-9.581C30.159,1.319,30.681,1.841,30.291,2.87z M8.707,20.121C8.318,19.732,8,19.864,8,20.414V25c0,0.55,0.386,0.768,0.857,0.485l2.401-1.441c0.472-0.283,0.539-0.833,0.15-1.222L8.707,20.121z"/>
                 </svg>  
-                Send Message
+                <p class="btn-text" id="form-btn">Send Message</p>
               </span>
               <span class="loading-spinner" style="display: none;">
                 <svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">

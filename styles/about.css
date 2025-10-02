@@ -68,13 +68,15 @@
 .profile{
     opacity: 0;
     animation-play-state: running;
-    width: 27%;
+    width: 26%;
     padding-right: 2.5rem;
 }
 
 .profile-image-container{
     padding: .75rem;
     margin-bottom: 1.5rem;
+    display: flex;
+    justify-content: center;
 }
 
 .profile-image-wrapper{
@@ -84,7 +86,8 @@
     overflow: hidden;
     justify-content: center;
     align-items: center;
-    height: 24rem;
+    height: 30rem;
+    width: 30rem;
     display: flex;
 }
 .profile-image-wrapper>img{
@@ -214,7 +217,28 @@
 | **Big screens**         | `desktop-xl` | 1536px and more  | 2K/4K and TV                     |
 
 */
-    
+@media(max-width:1025px){
+    .profile{
+        padding-right: 1.5rem;
+    }
+
+    .about {
+        padding-right: 1.5rem;
+        padding-top: 1.5rem;
+        width: unset;
+    }
+}  
+
+@media(max-width:768px){
+    .main-content{
+        padding: 0;
+    }
+
+    .profile{
+        width:unset;
+    }
+} 
+
 @media (max-width: 639px) {
     .profile{
         width: 100%;
@@ -229,6 +253,7 @@
     .about{
         width: 100%;
         margin-top: 1.5rem;
+        padding: 0;
     }
     
     .about-wrapper{
@@ -250,6 +275,13 @@
     .container{
         margin: 3rem 0 0 0;
         padding: 0;
+    }
+
+    .profile-image-container{
+        padding: .75rem;
+        margin-bottom: 1.5rem;
+        display: flex;
+        justify-content: center;
     }
 
 }

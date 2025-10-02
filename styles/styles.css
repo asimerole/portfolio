@@ -279,7 +279,9 @@ body, html {
 .delay-200 { animation-delay: 200ms; }
 .delay-300 { animation-delay: 300ms; }
 .delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
 .delay-600 { animation-delay: 600ms; }
+.delay-700 { animation-delay: 700ms; }
 .delay-800 { animation-delay: 800ms; }
 
 
@@ -381,7 +383,18 @@ body, html {
         display: block;
     }
 
-    .menu-container{
+    .menu-container{        --tw-space-y-reverse: 0;
+        margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+        transition: all 0.3s ease;
+        background: rgba(17, 25, 40, 0.6);
+        border: 1px solid rgba(66, 153, 225, 0.2);
+        border-radius: 12px;
+        padding: 1rem;
+        align-items: center;
+        /* display: flex; */
+        color: inherit;
+        text-decoration: inherit;
         background: rgba(17, 25, 40, 0.9);
         backdrop-filter: blur(15px);
         border: 1px solid rgba(66, 153, 225, 0.3);
@@ -441,6 +454,18 @@ body, html {
     .lang{
         margin-top: 15px;
         display: flex;
+        --tw-space-y-reverse: 0;
+        margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
+        margin-bottom: calc(1rem * var(--tw-space-y-reverse));
+        transition: all 0.3s ease;
+        background: rgba(17, 25, 40, 0.6);
+        border: 1px solid rgba(66, 153, 225, 0.2);
+        border-radius: 12px;
+        padding: 1rem;
+        align-items: center;
+        display: flex;
+        color: inherit;
+        text-decoration: inherit;
     }
 
     .nav-links{

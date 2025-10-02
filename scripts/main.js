@@ -10,9 +10,13 @@ const translations = {
     contacts_button: "GET IN TOUCH",
     contact_mid_head: "CONTACT",
     new_projects_status: "Open for new projects.",
+    contacts_header: "Get In Touch",
     form_name: "Your Name",
+    form_name_placeholder: "Your name",
     form_mail: "Your Email",
+    form_mail_placeholder: "your.email@example.com",
     form_msg: "Your Message",
+    form_msg_placeholder: "Your message...",
     form_btn: "Send",
     about_card_content: "Click for more detailed information",
     cpp_modal_description: "Deep understanding of basic and modern C++ syntax (C++11/14/17). OOP principles, working with pointers, dynamic memory, copy constructor. Using third-party libraries: Boost (Asio, Filesystem), libcurl for network and ftp requests, WinAPI for working with native windows and Windows system resources.",
@@ -31,7 +35,10 @@ const translations = {
       Today, I specialize in developing both web and desktop applications, working with technologies such as C++, Boost, WinAPI, curl, and SQL Server. I also have experience in server setup, app deployment, and building internal infrastructure for team-based projects.
       <br><br>                    
       My approach to work combines system thinking, responsibility, and a strong drive for clarity. For me, it’s not just about writing code, but about creating solutions that genuinely benefit people.
-    `
+    `,
+    presentation_project_text: "Presentation about streaming services. How Netflix or YouTube stream their videos. Interesting facts and answers to common questions.",
+    roomtibet_project_text: "A practice project website for booking flights and finding optimal routes. Fully optimized for mobile devices with responsive design. Features dynamic flight search and user-friendly interface.",
+
   },
   Deutsch: {
     language: "Deutsch 🇩🇪",
@@ -44,9 +51,13 @@ const translations = {
     contacts_button: "IN KONTAKT TRETEN",
     contact_mid_head: "KONTAKT",
     new_projects_status: "Offen für neue Projekte.",
+    contacts_header: "Kontakt aufnehmen",
     form_name: "Ihr Name",
+    form_name_placeholder: "Name",
     form_mail: "Ihre E-Mail",
+    form_mail_placeholder: "ihr.email@example.de",
     form_msg: "Ihre Nachricht",
+    form_msg_placeholder: "Nachricht...",
     form_btn: "Abschicken",
     about_card_content: "Klicken Sie hier für weitere Informationen",
     cpp_modal_description: "Tiefes Verständnis der grundlegenden und modernen C++-Syntax (C++11/14/17). OOP-Prinzipien, Arbeiten mit Zeigern, dynamischer Speicher, Kopierkonstruktor. Verwendung von Drittanbieterbibliotheken: Boost (Asio, Dateisystem), libcurl für Netzwerk- und FTP-Anfragen, WinAPI für die Arbeit mit nativen Windows- und Windows-Systemressourcen.",
@@ -65,7 +76,9 @@ const translations = {
       Heute spezialisiere ich mich auf die Entwicklung von Web- und Desktop-Anwendungen und arbeite mit Technologien wie C++, Boost, WinAPI, curl und SQL Server. Ich habe auch Erfahrung in der Serverkonfiguration, dem Deployment von Anwendungen und dem Aufbau interner Infrastruktur für Teamprojekte.
       <br><br>
       Mein Arbeitsansatz kombiniert systemisches Denken, Verantwortungsbewusstsein und einen starken Drang nach Klarheit. Für mich geht es beim Programmieren nicht nur um das Schreiben von Code, sondern darum, Lösungen zu schaffen, die den Menschen wirklich helfen.
-    `
+    `,
+    presentation_project_text: "Präsentation über Streaming-Dienste. Wie Netflix oder YouTube ihre Videos streamen. Interessante Fakten und Antworten auf häufig gestellte Fragen.",
+    roomtibet_project_text: "Eine Übungsprojekt-Website für die Buchung von Flügen und die Suche nach optimalen Routen. Vollständig für mobile Geräte optimiert mit Responsive Design. Mit dynamischer Flugsuche und benutzerfreundlicher Oberfläche.",
   },
   Українська: {
     language: "Українська 🇺🇦",
@@ -78,9 +91,13 @@ const translations = {
     contacts_button: "ЗВ’ЯЗАТИСЯ ЗІ МНОЮ",
     contact_mid_head: "КОНТАКТ",
     new_projects_status: "Відкритий для нових проєктів.",
+    contacts_header: "Зв'язатися зі мною",
     form_name: "Ваше ім’я",
+    form_name_placeholder: "Ваше ім'я",
     form_mail: "Ваша електронна пошта",
+    form_mail_placeholder: "name.surname@example.ua",
     form_msg: "Ваше повідомлення",
+    form_msg_placeholder: "Ваше повідомлення...",
     form_btn: "Надіслати",
     about_card_content: "Натисніть для більш детальної інформації",
     cpp_modal_description: "Глибоке розуміння базового та сучасного синтаксису C++ (C++11/14/17). Принципи ООП, робота з вказівниками, динамічна пам'ять, конструктор копіювання. Використання сторонніх бібліотек: Boost (Asio, Filesystem), libcurl для мережевих та ftp-запитів, WinAPI для роботи з нативними Windows та системними ресурсами Windows.",
@@ -99,7 +116,9 @@ const translations = {
       Сьогодні я спеціалізуюсь на розробці як веб, так і десктопних застосунків, працюючи з такими технологіями, як C++, Boost, WinAPI, curl і SQL Server. Також маю досвід у налаштуванні серверів, деплойменті застосунків і побудові внутрішньої інфраструктури для командних проєктів.
       <br><br>
       Мій підхід до роботи поєднує системне мислення, відповідальність і прагнення до ясності. Для мене програмування — це не просто написання коду, а створення рішень, що реально приносять користь людям.
-    `
+    `,
+    presentation_project_text: "Презентація про потокові сервіси. Як Netflix або YouTube транслюють свої відео. Цікаві факти та відповіді на поширені запитання.",
+    roomtibet_project_text: "Практичний проект веб-сайту для бронювання авіаквитків та пошуку оптимальних маршрутів. Повністю оптимізований для мобільних пристроїв з адаптивним дизайном. Має динамічний пошук рейсів та зручний інтерфейс.",
   }
 };
 
@@ -127,12 +146,16 @@ function setLanguage(lang) {
   if (!t) return;
 
   const htmlFields = ["about_text"];
+  const textareaFields = ["input-name", "input-email", "textarea-msg"];
   const update = (id, text) => {
     const el = document.getElementById(id);
     if (!el) return; 
     if (htmlFields.includes(id)) {
       el.innerHTML = text;
-    } else {
+    } else if(textareaFields.includes(id)){
+      el.placeholder = text;
+    }
+    else {
       el.textContent = text;
     }
   };
@@ -153,11 +176,17 @@ function setLanguage(lang) {
   update("contact-mid-header", t.contact_mid_head);
   update("projects-status", t.new_projects_status);
   update("form-name", t.form_name);
+  update("input-name", t.form_name_placeholder);
   update("form-email", t.form_mail);
+  update("input-email", t.form_mail_placeholder);
   update("form-msg", t.form_msg);
-  update("form-button", t.form_btn);
+  update("textarea-msg", t.form_msg_placeholder);
+  update("form-btn", t.form_btn);
   update("about-card-content", t.about_card_content);
   update("about_text", t.about_text);
+  update("presentation-project",t.presentation_project_text);
+  update("RoomTibet-project",t.roomtibet_project_text);
+  update("contacts-main-header",t.contacts_header);
 
   document.getElementById('language-mobile').textContent = lang;
   document.getElementById('language-desktop').textContent = lang;
